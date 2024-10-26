@@ -43,6 +43,12 @@ public class StringCalculatorTest {
         } catch (IllegalArgumentException exception) {
             assertEquals(exception.getMessage(), "Negative numbers not allowed: -5");
         }
+        try {
+            String[] array = {"2", "-5", "-6"};
+            stringCalculator.sum(array);
+        } catch (IllegalArgumentException exception) {
+            assertEquals(exception.getMessage(), "Negative numbers not allowed: -5, -6");
+        }
     }
 
     @Test
